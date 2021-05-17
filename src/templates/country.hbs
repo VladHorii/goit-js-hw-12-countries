@@ -1,0 +1,21 @@
+<h2 class="country__name bold">{{this.name}}</h2>
+
+<div class="country">
+  <img class="country__img" width="200" src="{{this.flag}}" alt="flag {{this.name}}" />
+  <div class="country__content">
+    <p class="country__capital bold">
+      Capital:
+      <span class="country__capital--value default">{{this.capital}}</span>
+    </p>
+    <p class="country__population bold">
+      Population:
+      <span class="country__population--value default">{{this.population}}</span>
+    </p>
+    <p class="country__lang--title bold">Languages:</p>
+    <ul class="country__lang lang">
+      {{#each this.languages}}
+      <li class="lang__item">{{this.name}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
